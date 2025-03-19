@@ -3,12 +3,105 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+	<style>
+		.container{
+			width: 500px;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.inputText{
+			width: 300px;
+			margin: 10px 0; 
+			text-align: center;
+		}
+
+		.gameHead{
+			text-align: center;
+		}
+
+		.btn{
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		#submit{
+			background-color: pink;
+			color: purple;
+			font-weight: 600;
+			border: 1px solid black;
+			border-radius: 10px;
+			padding: 5px 10px;
+		}
+
+		.grid-container{
+			display: none;
+		}
+
+		.message{
+			text-align: center;
+			font-size: 20px;
+			font-weight: 600;
+			display: none;
+		}
+
+		.grid{
+			width: 300px;
+			display: grid;
+			grid-template-rows: 100px 100px 100px;
+			grid-template-columns: 100px 100px 100px;
+			margin: auto;
+		}
+
+		.box{
+			background-color: pink;
+			border: 1px solid black;
+			cursor: pointer;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			font-size: 100px;
+			font-weight: 600;
+		}
+
+	</style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+	<h1 class="gameHead">Tic Tac Toe</h1>
+	
+	<div class="container">
+		<div>
+			<label>Player 1</label>
+			<input class="inputText" type="text" name="player1" id="player-1"><br>
+		</div>
+		<div>
+			<label>Player 2</label>
+			<input class="inputText" type="text" name="player2" id="player-2"><br>
+		</div>
+		<div class="btn">
+			<button id="submit" type="submit">Start Game</button>
+		</div>
+	</div>
+
+	<div class="grid-container">
+		<div class="message">harsh you're up</div><br>
+		<div class="grid">
+			<div class="box" id="div1"></div>
+			<div class="box" id="div2"></div>
+			<div class="box" id="div3"></div>
+			<div class="box" id="div4"></div>
+			<div class="box" id="div5"></div>
+			<div class="box" id="div6"></div>
+			<div class="box" id="div7"></div>
+			<div class="box" id="div8"></div>
+			<div class="box" id="div9"></div>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="script.js">
 </script>
 
 </body>
