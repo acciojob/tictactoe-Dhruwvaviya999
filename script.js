@@ -3,8 +3,8 @@ const formContainer = document.getElementsByClassName("container")[0];
 const gridContainer = document.getElementsByClassName("grid-container")[0];
 
 const startBtn = document.getElementById("submit").addEventListener("click", () => {
-    const player1Name = document.getElementById("player-1").value;
-    const player2Name = document.getElementById("player-2").value;
+    const player1Name = document.getElementById("player1").value;
+    const player2Name = document.getElementById("player2").value;
     const boxes = document.getElementsByClassName("box");
     const message = document.getElementsByClassName("message")[0];
     const box1 = document.getElementById("div1");
