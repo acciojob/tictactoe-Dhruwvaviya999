@@ -1,109 +1,30 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<style>
-		.container{
-			width: 500px;
-			margin: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.inputText{
-			width: 300px;
-			margin: 10px 0; 
-			text-align: center;
-		}
-
-		.gameHead{
-			text-align: center;
-		}
-
-		.btn{
-			text-align: center;
-			margin-top: 20px;
-		}
-
-		#submit{
-			background-color: pink;
-			color: purple;
-			font-weight: 600;
-			border: 1px solid black;
-			border-radius: 10px;
-			padding: 5px 10px;
-		}
-
-		.grid-container{
-			display: none;
-		}
-
-		.message{
-			text-align: center;
-			font-size: 20px;
-			font-weight: 600;
-			display: none;
-		}
-
-		.grid{
-			width: 300px;
-			display: grid;
-			grid-template-rows: 100px 100px 100px;
-			grid-template-columns: 100px 100px 100px;
-			margin: auto;
-		}
-
-		.box{
-			background-color: pink;
-			border: 1px solid black;
-			cursor: pointer;
-			padding-left: 15px;
-			padding-bottom: 15px;
-			font-size: 100px;
-			font-weight: 600;
-		}
-
-	</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<h1 class="gameHead">Tic Tac Toe</h1>
-	
-	<div class="container">
-		<div>
-			<label>Player 1</label>
-			<input class="inputText" type="text" name="player1" id="player1"><br>
-		</div>
-		<div>
-			<label>Player 2</label>
-			<input class="inputText" type="text" name="player2" id="player2"><br>
-		</div>
-		<div class="btn">
-			<button id="submit" type="submit">Start Game</button>
-		</div>
-	</div>
+    <div class="container">
+        <!-- Fixed IDs for Cypress compatibility -->
+        <div class="input-section">
+            <input type="text" id="player1" placeholder="Enter Player 1 Name" />
+            <input type="text" id="player2" placeholder="Enter Player 2 Name" />
+            <button id="submit">Submit</button>
+        </div>
 
-	<div class="grid-container">
-		<div class="message">harsh you're up</div><br>
-		<div class="grid">
-			<div class="box div1" id="1"></div>
-			<div class="box div2" id="2"></div>
-			<div class="box div3" id="3"></div>
-			<div class="box div4" id="4"></div>
-			<div class="box div5" id="5"></div>
-			<div class="box div6" id="6"></div>
-			<div class="box div7" id="7"></div>
-			<div class="box div8" id="8"></div>
-			<div class="box div9" id="9"></div>
-		</div>
-	</div>
+        <div class="game-section hidden">
+            <h1>Tic Tac Toe</h1>
+            <div class="message"></div>
+            <div class="board">
+                <!-- 9 cells created using JS -->
+            </div>
+            <button id="restart" class="hidden">Restart</button>
+        </div>
+    </div>
 
-    <script type="text/javascript" src="script.js">
-</script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
