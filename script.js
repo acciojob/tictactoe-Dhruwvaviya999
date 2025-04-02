@@ -13,7 +13,7 @@ document.getElementById("submit").addEventListener("click", () => {
         document.querySelector(".input-section").classList.add("hidden");
         document.querySelector(".game-section").classList.remove("hidden");
         currentPlayer = player1;
-        updateMessage(`${currentPlayer}, youre up!`);
+        updateMessage(`${currentPlayer}, you\'re up!`);
         createBoard();
     } else {
         alert("Please enter names for both players.");
@@ -61,7 +61,7 @@ function handleCellClick(index) {
 
 function switchPlayer() {
     currentPlayer = currentPlayer === player1 ? player2 : player1;
-    updateMessage(`${currentPlayer}, youre up!`);
+    updateMessage(`${currentPlayer}, you\'re up!`);
 }
 				  
 function updateMessage(msg) {
@@ -84,6 +84,6 @@ function checkWinner() {
 document.getElementById("restart").addEventListener("click", () => {
     createBoard();
     currentPlayer = player1;
-    updateMessage(`${currentPlayer}, youre up!`);
+    updateMessage(`${currentPlayer}, you\'re up!`);
     document.getElementById("restart").classList.add("hidden");
 });
